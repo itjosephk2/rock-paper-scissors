@@ -19,24 +19,25 @@ body {
 
 .header-card {
   border: 1px solid #D8D8D8;
-  border-radius: 15px;
+  border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 700px;
-  height: 150px;
+  width: 311px;
+  height: 96px;
+
 }
 .logo {
-  height: 96px;
-  width: 159px;
-  margin: 20px;
+  width: 83px;
+  height: 48px;
+  margin: 22px;
 }
 .score-card {
   margin: 20px;
-  border-radius: 8px;
-  background-image: linear-gradient(to bottom, #F3F3F3 , #FFFFFF);
-  width: 150px;
-  height: 114px;
+  border-radius: 4px;
+  background-color: #fff;
+  width: 80px;
+  height: 72px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,15 +45,15 @@ body {
 }
 .score-title {
   color: #2A45C2;
-  font-size: 16px;
+  font-size: 10px;
   font-weight: 600;
-  letter-spacing: 2.5px;
+  letter-spacing: 1.56px;
 }
 .score {
-  line-height: 64px;
+  line-height: 40px;
   font-weight: 700;
   color: #565468;
-  font-size: 64px;
+  font-size: 40px;
 }
 .game-screen {
 
@@ -61,28 +62,15 @@ body {
   background-image: url("../images/bg-triangle.svg");
   background-repeat: no-repeat;
   background-position: center;
-  width: 476px;
-  height: 430px;
+  background-size: 166px 181px;
+  width: 312px;
+  height: 282px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
-.paper-oval {
-  width: 198px;
-  height: 203px;
-  border-radius: 100%;
-  background-color: #2A45C2;
-}
-.inner-paper-oval {
-  width: 198px;
-  height: 194px;
-  border-radius: 100%;
-  background-color: #4664F4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .choice {
   cursor: pointer;
 }
@@ -93,36 +81,47 @@ body {
   background-color: #979797;
 }
 .oval-one-small {
-  width: 198px;
-  height: 203px;
+  width: 130px;
+  height: 133px;
 }
 .oval-two-small {
-  width: 198px;
-  height: 194px;
+  width: 129.37px;
+  height: 126.78px;
 }
 .oval-three-small {
-  width: 152px;
-  height: 152px;
+  width: 100px;
+  height: 100px;
 }
 .oval-four-small {
-  width: 152px;
-  height: 144px;
+  width: 99.31px;
+  height: 94.1px;
 }
 .oval-one-large {
-  width: 292.61px;
-  height: 300px;
+  width: 129.37px;
+  height: 126.78px;
 }
 .oval-two-large {
   width: 292.61px;
   height: 286.7px;
 }
 .oval-three-large {
-  width: 224.63px;
-  height: 224.63px;
+  width: 100px;
+  height: 100px;
 }
 .oval-four-large {
-  width: 224.63px;
-  height: 212.81px;
+  width: 99.31px;
+  height: 94.1px;
+}
+.paper-oval {
+  border-radius: 100%;
+  background-color: #2A45C2;
+}
+.inner-paper-oval {
+  border-radius: 100%;
+  background-color: #4664F4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .rock-oval {
   border-radius: 100%;
@@ -147,7 +146,6 @@ body {
   align-items: center;
 }
 .white-shadow-oval {
-
   background-color: #979797;
   border-radius: 100%;
   display: flex;
@@ -202,33 +200,30 @@ body {
   justify-content: center;
 }
 .icon-rock-small {
-  width: 64px;
-  height: 64px;
+  width: 41.82px;
+  height: 41.82px;
 }
 .icon-paper-small {
-  width: 67.21px;
-  height: 80px;
+  width: 43.91px;
+  height: 52.82px;
 }
 .icon-scissors-small {
-  width: 54.07px;
-  height: 80px;
+  width: 35.33px;
+  height: 52.27px;
 }
 .icon-rock-large {
-  width: 94.58px;
-  height: 94.58px;
+  width: 41.82px;
+  height: 41.82px;
 }
 .icon-paper-large {
-  width: 99.32px;
-  height: 118.23px;
+  width: 43.91px;
+  height: 52.82px;
 }
 .icon-scissors-large {
-  width: 79.9px;
-  height: 118.23px;
+  width: 35.33px;
+  height: 52.27px;
 }
 .rules-button {
-  position: fixed;
-  right: 50px;
-  bottom: 20px;
   background-color: transparent;
   border-radius: 8px;
   border: 1px solid #fff;
@@ -238,10 +233,9 @@ body {
   letter-spacing: 2.5px;
   font-size: 16px;
 }
-.rules-button:hover {
+.hover:hover {
   background-color: #fff;
   color: #3B4262
-
 }
 .modal-bg {
   height: 100vh;
@@ -316,4 +310,103 @@ body {
 }
 .hidden {
   display: none;
+}
+@media only screen and (min-width: 1080px) {
+  .header-card {
+    border-radius: 15px;
+    width: 700px;
+    height: 150px;
+  }
+  .logo {
+    height: 96px;
+    width: 159px;
+    margin: 22px;
+  }
+  .score-card {
+    width: 150px;
+    height: 114px;
+    border-radius: 8px;
+    background-image: linear-gradient(to bottom, #F3F3F3 , #FFFFFF);
+  }
+  .score-title {
+    font-size: 16px;
+    letter-spacing: 2.5px;
+  }
+  .game-choice {
+    background-size: 254px 287px;
+    width: 476px;
+    height: 430px;
+  }
+  .score {
+    line-height: 64px;
+    font-size: 64px;
+  }
+  .game-choice {
+    width: 476px;
+    height: 430px;
+  }
+  .oval-one-small {
+    width: 198px;
+    height: 203px;
+  }
+  .oval-two-small {
+    width: 198px;
+    height: 194px;
+  }
+  .oval-three-small {
+    width: 152px;
+    height: 152px;
+  }
+  .oval-four-small {
+    width: 152px;
+    height: 144px;
+  }
+  .oval-one-large {
+    width: 292.61px;
+    height: 300px;
+  }
+  .oval-two-large {
+    width: 292.61px;
+    height: 286.7px;
+  }
+  .oval-three-large {
+    width: 224.63px;
+    height: 224.63px;
+  }
+  .oval-four-large {
+    width: 224.63px;
+    height: 212.81px;
+  }
+  .rules-button {
+    position: fixed;
+    right: 50px;
+    bottom: 20px;
+  }
+  .icon-rock-small {
+    width: 64px;
+    height: 64px;
+  }
+  .icon-paper-small {
+    width: 67.21px;
+    height: 80px;
+  }
+  .icon-scissors-small {
+    width: 54.07px;
+    height: 80px;
+  }
+  .icon-rock-large {
+    width: 94.58px;
+    height: 94.58px;
+  }
+  .icon-paper-large {
+    width: 99.32px;
+    height: 118.23px;
+  }
+  .icon-scissors-large {
+    width: 79.9px;
+    height: 118.23px;
+  }
+  .battle-screen {
+    flex-direction: column-reverse;
+  }
 }

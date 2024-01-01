@@ -9,9 +9,11 @@ for (let choice of choices) {
 // display rules when clicked
 document.getElementById('rules-button').onclick = function() {
   document.getElementById('modal').classList.remove('hidden');
+  document.getElementById('rules-button').classList.remove('hover');
 }
 document.getElementById("close-modal").onclick = function() {
   document.getElementById('modal').classList.add('hidden');
+  document.getElementById('rules-button').classList.add('hover');
 }
 // display your choice on screen
 function battleScreen(playerChoice) {
