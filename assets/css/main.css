@@ -101,8 +101,8 @@ body {
   height: 126.78px;
 }
 .oval-two-large {
-  width: 292.61px;
-  height: 286.7px;
+  width: 129.37px;
+  height: 126.78px;
 }
 .oval-three-large {
   width: 100px;
@@ -159,7 +159,7 @@ body {
   align-items: center;
 }
 .battle-screen {
-  min-width: 700px;
+  min-width: 325px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -169,26 +169,34 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  min-width: 700px;
+  min-width: 325px;
 }
 .choice-text {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 15px;
   line-height: 32px;
-  letter-spacing: 3px;
+  letter-spacing: 1.88px;
+  text-align: center;
+  padding-top: 17px;
+}
+.player-choice-text {
+    width: 130px;
+}
+.computer-choice-text {
+  width: 145px;
 }
 .choice-cards-holder {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 700px;
+  min-width: 325px;
 }
 .choice-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 430px;
+  height: 130px;
 }
 .choice-holder {
   height: 224px;
@@ -239,26 +247,22 @@ body {
 }
 .modal-bg {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, .3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .modal {
   background-color: #fff;
-  height: 415px;
-  width: 400px;
-  border-radius: 8px;
+  height: 100%;
+  width: 100%;
   background-image: url('../images/image-rules.svg');
   background-repeat: no-repeat;
-  background-position: 50% 75%;
+  background-position: center;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  flex-direction: column;
 }
 .modal-title {
   font-weight: 800;
@@ -266,13 +270,13 @@ body {
   line-height: 32px;
   color: #3B4262;
   text-transform: uppercase;
-  margin: 28px 32px;
+  margin-top: 95px;
 }
 .close-modal {
   color: #3B4262;
   font-size: 20px;
   cursor: pointer;
-  margin: 28px 32px;
+  margin-bottom: 65px;
 }
 .result-box {
   width: 220px;
@@ -283,6 +287,9 @@ body {
   flex-direction: column;
   margin-left: 77px;
   margin-right: 77px;
+}
+.result-box-desktop {
+  display: none;
 }
 .result-text {
   width: 218px;
@@ -307,9 +314,6 @@ body {
 .reset-button:hover {
   color: #DB2E4D;
   cursor: pointer;
-}
-.hidden {
-  display: none;
 }
 @media only screen and (min-width: 1080px) {
   .header-card {
@@ -409,4 +413,69 @@ body {
   .battle-screen {
     flex-direction: column-reverse;
   }
+  .player-choice {
+    order: 0;
+  }
+  .result-box {
+    order: 1;
+  }
+  .computer-choice {
+    order: 2;
+  }
+  .battle-screen,
+  .choice-text-box,
+  .choice-cards-holder {
+    min-width: 700px;
+  }
+  .result-box-desktop {
+    display: block;
+  }
+  .result-box-mobile {
+    display: none;
+  }
+  .choice-card {
+    height: 430px;
+  }
+  .choice-text {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 3px;
+  }
+  .player-choice-text {
+      width: auto;
+      text-align: inherit;
+  }
+  .computer-choice-text {
+    width: auto;
+    text-align: inherit;
+  }
+  .modal-bg {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal {
+    height: 415px;
+    width: 400px;
+    border-radius: 8px;
+    background-position: 50% 75%;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  .modal-title {
+    margin: 28px 32px;
+  }
+  .close-modal {
+    margin: 28px 32px;
+  }
+}
+.hidden {
+  display: none;
 }
