@@ -13,7 +13,7 @@
     <img class="logo" src="assets/images/logo.svg" alt="">
     <div class="score-card">
       <h1 class="score-title">Score</h1>
-      <p class="score">0</p>
+      <p id="score" class="score">0</p>
     </div>
 
   </div>
@@ -62,7 +62,12 @@
           <div class="choice-holder">
           </div>
         </div>
-
+        <div class="result-box">
+          <h2 id="win" class="result-text hidden">You Win</h2>
+          <h2 id="lose" class="result-text hidden">You Lose</h2>
+          <h2 id="draw" class="result-text hidden">Draw</h2>
+          <button id="reset" class="reset-button" type="button" name="button">Play Again</button>
+        </div>
         <div class="choice-card" id="computer-choice">
           <div class="choice-holder">
           </div>
@@ -73,14 +78,16 @@
     </div>
 
 
-    <h2 class="hidden">You Win</h2>
-    <h2 class="hidden">You Lose</h2>
-
-    <button class="hidden" type="button" name="button">Play Again</button>
   </div>
-  <button class="rules-button" type="button" name="button">Rules</button>
-  <script type="text/javascript" src="assets/js/script.js">
 
-  </script>
+  <div id="modal" class="hidden modal-bg">
+    <div class="modal">
+      <h2 class="modal-title">Rules</h2>
+      <i id="close-modal" class="close-modal fa-solid fa-x"></i>
+    </div>
+  </div>
+  <button id="rules-button" class="rules-button" type="button" name="button">Rules</button>
+  <script type="text/javascript" src="assets/js/script.js"></script>
+  <script src="https://kit.fontawesome.com/f8d980d35b.js" crossorigin="anonymous"></script>
 </body>
 </html>
