@@ -6,6 +6,13 @@ for (let choice of choices) {
     battleScreen(choice);
   }
 }
+// display rules when clicked
+document.getElementById('rules-button').onclick = function() {
+  document.getElementById('modal').classList.remove('hidden');
+}
+document.getElementById("close-modal").onclick = function() {
+  document.getElementById('modal').classList.add('hidden');
+}
 // display your choice on screen
 function battleScreen(playerChoice) {
   document.querySelector("[data-board-type='selector']").classList.add("hidden");
@@ -35,35 +42,55 @@ function battleScreen(playerChoice) {
     document.getElementById('computer-choice').innerHTML = '<div class="choice scissors-oval oval-one-large"><div class="inner-scissors-oval oval-two-large"><div class="white-shadow-oval oval-three-large"><div class="white-oval oval-four-large"><img class="icon-scissors-large" src="assets/images/icon-scissors.svg" alt=""></div></div></div></div>';
   }
   // check to see who wins
+  let result = null;
   if (playerChoice.dataset.icon == "paper" && randomInt == 0) {
-    console.log("You win");
+    result = 'win';
   }
   else if (playerChoice.dataset.icon == "paper" && randomInt == 1) {
-    console.log("It is a draw");
+    result = 'draw';
   }
   else if (playerChoice.dataset.icon == "paper" && randomInt == 2){
-    console.log("You Loose")
+    result = 'lose';
   }
   else if (playerChoice.dataset.icon == "rock" && randomInt == 0) {
-    console.log("It is a draw");
+    result = 'draw';
   }
   else if (playerChoice.dataset.icon == "rock" && randomInt == 1) {
-    console.log("You Loose");
+    result = 'lose';
   }
   else if (playerChoice.dataset.icon == "rock" && randomInt == 2){
-    console.log("You win");
+    result = 'win';
   }
   else if (playerChoice.dataset.icon == "scissors" && randomInt == 0) {
-    console.log("You Loose");
+    result = 'lose';
   }
   else if (playerChoice.dataset.icon == "scissors" && randomInt == 1) {
-    console.log("You win");
+    result = 'win';
   }
   else if (playerChoice.dataset.icon == "scissors" && randomInt == 2){
-    console.log("It is a draw");
+    result = 'draw';
+  }
+  // display the winner
+  // update score
+  if (result == "win") {
+    document.getElementById('win').classList.remove('hidden');
+    document.getElementById('score').innerHTML = parseInt(document.getElementById('score').innerHTML) + 1;
+  }
+  else if (result == "lose") {
+    document.getElementById('lose').classList.remove('hidden');
+    document.getElementById('score').innerHTML = parseInt(document.getElementById('score').innerHTML) - 1;
+  }
+  else if (result == "draw") {
+    document.getElementById('draw').classList.remove('hidden');
+  }
+  // reset game on play again
+  document.getElementById('reset').onclick = function() {
+    document.getElementById('player-choice').innerHTML = '<div class="choice-holder"></div>';
+    document.getElementById('computer-choice').innerHTML = '<div class="choice-holder"></div>';
+    document.getElementById('draw').classList.add('hidden');
+    document.getElementById('lose').classList.add('hidden');
+    document.getElementById('win').classList.add('hidden');
+    document.querySelector("[data-board-type='selector']").classList.remove("hidden");
+    document.querySelector("[data-board-type='battle']").classList.add("hidden");
   }
 }
-// display the winner
-// update score
-// reset game on play again
-// display rules when clicked
