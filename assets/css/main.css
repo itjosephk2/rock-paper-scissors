@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Barlow+Semi+Condensed:wght@400;600;700&family=Figtree:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&family=Work+Sans:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+body {
+  background-image: linear-gradient(to bottom, #1F3757 , #131537);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header-card {
+  border: 1px solid #D8D8D8;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 700px;
+  height: 150px;
+}
+.logo {
+  height: 96px;
+  width: 159px;
+  margin: 20px;
+}
+.score-card {
+  margin: 20px;
+  border-radius: 8px;
+  background-image: linear-gradient(to bottom, #F3F3F3 , #FFFFFF);
+  width: 150px;
+  height: 114px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.score-title {
+  color: #2A45C2;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+}
+.score {
+  line-height: 64px;
+  font-weight: 700;
+  color: #565468;
+  font-size: 64px;
+}
+.game-screen {
+
+}
+.game-choice {
+  background-image: url("../images/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 476px;
+  height: 430px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.paper-oval {
+  width: 198px;
+  height: 203px;
+  border-radius: 100%;
+  background-color: #2A45C2;
+}
+.inner-paper-oval {
+  width: 198px;
+  height: 194px;
+  border-radius: 100%;
+  background-color: #4664F4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.choice {
+  cursor: pointer;
+}
+.choice:hover:after {
+  content: "";
+  width: 252px;
+  height: 248px;
+  background-color: #979797;
+}
+.oval-one-small {
+  width: 198px;
+  height: 203px;
+}
+.oval-two-small {
+  width: 198px;
+  height: 194px;
+}
+.oval-three-small {
+  width: 152px;
+  height: 152px;
+}
+.oval-four-small {
+  width: 152px;
+  height: 144px;
+}
+.oval-one-large {
+  width: 292.61px;
+  height: 300px;
+}
+.oval-two-large {
+  width: 292.61px;
+  height: 286.7px;
+}
+.oval-three-large {
+  width: 224.63px;
+  height: 224.63px;
+}
+.oval-four-large {
+  width: 224.63px;
+  height: 212.81px;
+}
+.rock-oval {
+  border-radius: 100%;
+  background-color: #9D1634;
+}
+.inner-rock-oval {
+  border-radius: 100%;
+  background-color: #DB2E4D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scissors-oval {
+  border-radius: 100%;
+  background-color: #C76C1B;
+}
+.inner-scissors-oval {
+  border-radius: 100%;
+  background-color: #EB9F0E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.white-shadow-oval {
+
+  background-color: #979797;
+  border-radius: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.white-oval {
+  background-color: #fff;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.battle-screen {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.choice-text-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 700px;
+}
+.choice-text {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 3px;
+}
+.choice-cards-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 700px;
+}
+.choice-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 430px;
+}
+.choice-holder {
+  height: 224px;
+  width: 224px;
+  border-radius: 100%;
+  background-color: rgba(0,0, 0, .1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-rock-small {
+  width: 64px;
+  height: 64px;
+}
+.icon-paper-small {
+  width: 67.21px;
+  height: 80px;
+}
+.icon-scissors-small {
+  width: 54.07px;
+  height: 80px;
+}
+.icon-rock-large {
+  width: 94.58px;
+  height: 94.58px;
+}
+.icon-paper-large {
+  width: 99.32px;
+  height: 118.23px;
+}
+.icon-scissors-large {
+  width: 79.9px;
+  height: 118.23px;
+}
+.rules-button {
+  position: fixed;
+  right: 50px;
+  bottom: 20px;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  width: 128px;
+  height: 40px;
+  cursor: pointer;
+  letter-spacing: 2.5px;
+  font-size: 16px;
+}
+.rules-button:hover {
+  background-color: #fff;
+  color: #3B4262
+
+}
+.hidden {
+  display: none;
+}

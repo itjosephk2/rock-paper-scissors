@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <div class="header-card">
+    <img class="logo" src="assets/images/logo.svg" alt="">
+    <div class="score-card">
+      <h1 class="score-title">Score</h1>
+      <p class="score">0</p>
+    </div>
+
+  </div>
+  <div class="game-screen">
+
+    <div class="game-choice" data-board-type="selector">
+
+      <div class="choice paper-oval oval-one-small" data-is-selectable="true" data-icon="paper">
+        <div class="inner-paper-oval oval-two-small">
+          <div class="white-shadow-oval oval-three-small">
+            <div class="white-oval oval-four-small">
+              <img class="icon-paper-small" src="assets/images/icon-paper.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="choice scissors-oval oval-one-small" data-is-selectable="true" data-icon="scissors">
+        <div class="inner-scissors-oval oval-two-small">
+          <div class="white-shadow-oval oval-three-small">
+            <div class="white-oval oval-four-small">
+              <img class="icon-scissors-small" src="assets/images/icon-scissors.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="choice rock-oval oval-one-small" data-is-selectable="true" data-icon="rock">
+        <div class="inner-rock-oval oval-two-small">
+          <div class="white-shadow-oval oval-three-small">
+            <div class="white-oval oval-four-small">
+              <img class="icon-rock-small" src="assets/images/icon-rock.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden battle-screen" data-board-type="battle">
+      <div class="choice-text-box">
+        <p class="choice-text">You Picked</p>
+        <p class="choice-text">The House Picked</p>
+      </div>
+      <div class="choice-cards-holder">
+        <div class="choice-card" id="player-choice">
+          <div class="choice-holder">
+          </div>
+        </div>
+
+        <div class="choice-card" id="computer-choice">
+          <div class="choice-holder">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <h2 class="hidden">You Win</h2>
+    <h2 class="hidden">You Lose</h2>
+
+    <button class="hidden" type="button" name="button">Play Again</button>
+  </div>
+  <button class="rules-button" type="button" name="button">Rules</button>
+  <script type="text/javascript" src="assets/js/script.js">
+
+  </script>
+</body>
+</html>
